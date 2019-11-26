@@ -60,7 +60,9 @@ export class AutoCollectNativePerformance {
         if (AutoCollectNativePerformance._metricsAvailable == undefined && isEnabled && !this._isInitialized) {
             // Try to require in the native-metrics library. If it's found initialize it, else do nothing and never try again.
             try {
-                const NativeMetricsEmitters = require("applicationinsights-native-metrics");
+                // remove the require call to prevent rollup breaking while building an app that does not use native metrics
+                // const NativeMetricsEmitters = require("applicationinsights-native-metrics");
+                const NativeMetricsEmitters = undefined;
                 AutoCollectNativePerformance._emitter = new NativeMetricsEmitters();
                 AutoCollectNativePerformance._metricsAvailable = true;
                 Logging.info("Native metrics module successfully loaded!");
