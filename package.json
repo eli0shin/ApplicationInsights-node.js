@@ -1,12 +1,12 @@
 {
-  "name": "applicationinsights",
+  "name": "applicationinsights-no-native-metrics",
   "license": "MIT",
   "bugs": "https://github.com/Microsoft/ApplicationInsights-node.js/issues",
   "version": "1.4.0",
   "description": "Microsoft Application Insights module for Node.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/ApplicationInsights-node.js"
+    "url": "https://github.com/eli0shin/ApplicationInsights-node.js"
   },
   "main": "./out/applicationinsights.js",
   "types": "./out/applicationinsights.d.ts",
